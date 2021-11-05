@@ -1,0 +1,505 @@
+*, *::before, *::after{
+    box-sizing: border-box;
+}
+
+body{
+    font-size: 15px;
+    font-family: Arial, Helvetica, sans-serif;
+    max-width: 100%;
+    margin: 0;
+}
+
+.container{
+    color: dimgray;
+    width: 100%;
+    margin: 0;
+    overflow: hidden;
+}
+
+a{
+    text-decoration: none;
+    color: #70757a;
+}
+
+
+button{
+    font-weight: normal;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover{
+    border: 0.5px solid;
+}
+
+
+.top-toolbar{
+    border: 1px solid rgb(226, 223, 223);
+    /* display: flex; */
+    height: 138px;
+    padding: 30px 25px;
+}
+
+.first-row{
+    display: flex;
+    align-items: center;
+    margin-bottom: 31px;
+}
+
+.logo{
+    margin-right: 1200px;
+}
+
+.search{
+    margin-right: 42em;
+    width: 40%;
+}
+
+.search form a i{
+    position: absolute;
+}
+
+.search input{
+    padding: 11.5px 7px;
+    width: 100%;
+    border: 1px solid #dddddd;
+    border-radius: 100px;
+    font-size: 17px;
+    box-shadow: 0 0 4px rgb(167, 159, 159), 0 0 0 rgb(167, 159, 159);
+    outline: none;
+}
+
+.search input:hover{
+    box-shadow: 0 0 4px rgb(167, 159, 159), 0 0 2px rgb(167, 159, 159);
+}
+
+.search .mic{
+    background-color: white;
+    color: dodgerblue;
+    text-align: center;
+    outline: none;
+    font-size: 17px;
+    right: 52.3em;
+    margin-top: 14px;
+}
+
+.search .srh{
+    background-color: white;
+    color: dodgerblue;
+    text-align: center;
+    outline: none;
+    font-size: 17px;
+    right: 50em;
+    margin-top: 14px;
+}
+
+.status button{
+    padding: 10.5px 20.5px;
+    border-radius: 5px;
+    background-color: #3d77da;
+    color: white;
+    border: 1px darkblue;
+    font-size: 14px;
+}
+
+.status button{
+    box-shadow: 1px 1px 1px black;
+}
+
+.view_profile{
+    text-align: center;
+    padding-left: 30px;
+    padding-top: 20px;
+    padding-right: 20px;
+    border: #383838 solid 1px;
+    border-radius: 15px;
+    margin: 100px 100px 30px 100px;
+}
+
+section h1{
+    color: rgb(10, 117, 224);
+    font-size: 60px;
+}
+
+.deets div{
+    font-size: 40px;
+    padding-bottom: 30px;
+    font-weight:bold;
+}
+
+
+#mng_acct{
+    border: 1px solid rgb(214, 214, 214);
+    border-radius: 10px;
+    padding: 15px;
+    text-align: center;
+    width: 360px;
+    display: none;
+    position: fixed;
+    top: 8%;
+    right: 1%;
+    background-color: white;
+}
+
+.full_name{
+    font-weight: bold;
+    font-size: 19px;
+    padding-bottom: 5px;
+    color: rgb(75, 75, 75);
+}
+
+.email{
+    font-size: 19px;
+    padding-bottom: 25px;
+}
+
+.mng_btn{
+    padding: 10px 20px;
+    text-align: center;
+    color: rgb(75, 75, 75);
+    font-weight: bold;
+    border: 1px solid gray;
+    border-radius: 20px;
+    
+}
+
+.mng_btn:hover{
+    text-decoration: none;
+    background-color: #d4d4d4;
+}
+
+.add_new{
+    padding: 10px 20px 10px 10px;
+}
+
+.add_new a{
+    color: gray;
+}
+
+.add_new a:hover{
+    text-decoration: none;
+}
+
+.add_new:hover{
+    background-color: #d4d4d4;
+}
+
+.sign_out{
+    margin-top: 22px;
+    font-size: 14px;
+    padding: 10px 15px;
+    outline: none;
+    background-color: white;
+    border: 1px solid rgb(197, 197, 197);
+    border-radius: 5px;
+}
+
+.sign_out:hover{
+    background-color: #d4d4d4;
+    outline: none;
+}
+
+#menudrop{
+    cursor: pointer;
+    margin: 3px 2px;
+    padding: 10px 7.5px 10px 7.5px;
+}
+
+#menudrop i{
+    font-size: larger;
+}
+
+#menudrop:hover{
+    border-radius: 100px;
+    background-color: rgb(219, 218, 218);
+}
+
+#apps{
+    width: 320px;
+    height: 410px;
+    overflow: scroll;
+    background-color: white;
+    margin: 10px;
+    padding: 30px 10px 10px 15px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 3px grey, -2px -2px 3px grey;
+    position: fixed;
+    top: 11%;
+    right: 1%;
+    display: none;
+}
+
+#apps a{
+    color: black;
+    text-decoration: none;
+    text-align: center;
+    padding: 6px 3px 6px 3px;
+    margin-bottom: 10px;
+}
+
+#apps a:hover{
+    background-color: rgb(148, 172, 196);
+}
+
+.top, .under{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 1em;
+}
+
+#apps p a{
+    margin-left: 27%;
+    border: 1px solid gray;
+    padding: 5px 15px;
+    text-align: center;
+    color: dodgerblue;
+}
+
+#apps p a:hover{
+    background-color: rgb(222, 225, 228);
+}
+
+.top span, .under span, .top img, .under img{
+    text-align: center;
+}
+
+.second-row{
+    display: flex;
+    margin-left: 155px;
+}
+
+.left{
+    margin-right: 90px;
+}
+
+.left a{
+    padding-right: 14px;
+    font-size: small;
+}
+
+.right ul{
+    list-style: none;
+    display: flex;
+    margin-top: -0.5px;
+}
+
+.right li a{
+    padding-right: 15px;
+}
+
+#dropdownheader{
+    list-style: none;
+    display: flex;
+    flex-flow: column;
+    position: absolute;
+    display: none;
+}
+
+#dropdownheader li{
+    padding: 10px 20px;
+    background-color: whitesmoke;
+    border-bottom: 1px solid gray;
+}
+
+#dropdownheader li:hover{
+    background-color: rgb(223, 223, 223);   
+}
+
+.current{
+    color: dodgerblue;
+    text-decoration: underline;
+    text-shadow: #383838;
+}
+
+.pagenav{
+    background-color: white;
+    padding: 6px;
+}
+
+.pagenav ul{
+    display: flex;
+    padding: 3px;
+}
+
+.pagenav ul li{
+    list-style: none;
+    margin-left: 0px;
+    padding: 5px 7px;
+    border: solid black 1px; 
+}
+
+.pagenav ul li:hover{
+    background: darkgray;
+}
+
+footer{
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    font-size: 15px;
+    background-color: #f7f4f4;
+}
+
+footer .location{
+    padding: 20px 0 8px 0;
+    padding-left: 160px;
+}
+
+.main nav ul{
+    display: flex;
+}
+
+.main nav ul li{
+    list-style: none;
+}
+
+footer .main{
+    padding: 0 0 3px 0;
+    padding-left: 120px;
+}
+
+footer .main a{
+    padding-right: 20px;
+}
+
+.location a:hover{
+    color: #383838;
+}
+
+.main a:hover{
+    color: #383838;
+}
+
+.drop{
+    padding-right: 20px;
+    cursor: pointer;
+}
+
+#dropdownfooter{
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    bottom: 8.5%;
+    display: none;
+    /* visibility: hidden; */
+}
+
+#dropdownfooter li{
+    border-bottom: 1px solid gray;
+    padding: 10px 20px;
+    background-color: whitesmoke;
+}
+
+#dropdownfooter li:hover{
+    background-color: rgb(223, 223, 223);
+}
+
+@media screen and (max-width: 780px){
+    .status, .right{
+        display: none;
+    }
+    .top-toolbar{
+        height: 180px;
+    }
+    .first-row{
+        display: flex;
+    }
+    .logo{
+        margin-right: 50px;
+        text-align: center;
+        margin-bottom: 15px;
+    }
+    .logo{
+        text-align: center;
+        margin-bottom: 15px;
+    }
+    .search{
+        width: 100%;
+    }
+    .search form a i{
+        position: absolute;
+    }
+    
+    .search input{
+        padding: 11.5px 7px;
+        width: 100%;
+        border: 1px solid #dddddd;
+        border-radius: 100px;
+        font-size: 17px;
+        box-shadow: 0 0 4px rgb(167, 159, 159), 0 0 0 rgb(167, 159, 159);
+        outline: none;
+    }
+    
+    .search input:hover{
+        box-shadow: 0 0 4px rgb(167, 159, 159), 0 0 2px rgb(167, 159, 159);
+    }
+    
+    .search .mic{
+        background-color: white;
+        color: dodgerblue;
+        text-align: center;
+        outline: none;
+        font-size: 17px;
+        right: 5em;
+        margin-top: 14px;
+    }
+    
+    .search .srh{
+        background-color: white;
+        color: dodgerblue;
+        text-align: center;
+        outline: none;
+        font-size: 17px;
+        right: 3em;
+        margin-top: 14px;
+    }
+    .left{
+        display: flex;
+    }
+    .left a{
+        font-size: 15px;
+        padding-right: 35px;
+    }
+    .second-row{
+        text-align: center;
+        margin-left: 12px;
+    }
+    .second-row i{
+        display: none;
+    }
+
+    .main_vessel{
+        display: flex;
+        flex-flow: column;
+        max-width: 100%;
+    }
+
+    .view_profile{
+        text-align: unset;
+        margin: 10px;
+    }
+
+    .profile_image{
+        font-size: 15px;
+        padding-bottom: 15px;
+        border-radius: 50px;
+    }
+    
+    .deets div{
+        font-size: 25px;
+        padding-bottom: 30px;
+        font-weight:bold;
+    }
+
+    .rs_top{
+        display: flex;
+    }
+
+    footer .location{
+        padding-left: 10px;
+    }
+    footer .main{
+        padding-left: 50px;
+    }
+
+}

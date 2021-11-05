@@ -1,0 +1,25 @@
+Content-Type: text/plain; charset="utf-8"
+MIME-Version: 1.0
+Content-Transfer-Encoding: 8bit
+Subject: Password reset on 127.0.0.1:8000
+From: webmaster@localhost
+To: amoto273@gmail.com
+Date: Thu, 04 Nov 2021 15:29:23 -0000
+Message-ID: <163603976322.8396.12290837068892434207@DESKTOP-5CP6E8J>
+
+
+You're receiving this email because you requested a password reset for your user account at 127.0.0.1:8000.
+
+Please go to the following page and choose a new password:
+
+http://127.0.0.1:8000/accounts/reset/Nw/avlkgz-d6f1a5065c1fe2b2bda81d9ccf33ba88/
+
+Your username, in case you’ve forgotten: motsino
+
+Thanks for using our site!
+
+The 127.0.0.1:8000 team
+
+
+
+-------------------------------------------------------------------------------

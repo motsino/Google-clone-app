@@ -1,0 +1,83 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'style-search.css' %}" type="text/css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css"
+        integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
+    <title>Google Clone</title>
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <div class="top-toolbar">
+                <div class="first-row">
+                    <div class="logo">
+                        <img src="../static/img/Google_2015_logo.svg.png" alt="Google logo" height="30" width="92">
+                    </div>
+                    <div class="search">
+                        <form action="searches" method="post">
+                            {% csrf_token %}
+                            <input type="text" class="search-bar" name="search" value="{{search_input}}">
+                            <a href="#"><i class="fas fa-microphone mic"></i></a>
+                            <a href="#"><i class="fas fa-search srh"></i></a>
+                        </form>
+                    </div>
+                    <div class="status">
+                        <a href="#"><i class="fas fa-th" style="color: black;"></i></a>
+                        <span>You're signed in</span>
+                    </div>
+                </div>
+                <div class="second-row">
+                    <nav class="left">
+                        <a href="#" class="current"><i class="fas fa-search"></i> All</a>
+                        <a href="#"><i class="far fa-image"></i> Images</a>
+                        <a href="#"><i class="fas fa-play"
+                                style="border: 2px solid rgb(167, 164, 164); padding: 2px 5px; font-size: 7px; border-radius: 2px;"></i>
+                            Videos</a>
+                        <a href="#"><i class="far fa-newspaper"></i> News</a>
+                        <a href="#"><i class="fas fa-map-marker-alt"></i> Maps</a>
+                        <a href="#"><i class="fas fa-ellipsis-v"></i> More</a>
+                    </nav>
+                    <nav class="right">
+                        <a href="#">Settings</a>
+                        <a href="#">Tools</a>
+                    </nav>
+                </div>
+            </div>
+        </header>
+
+        <section>
+            {% block content %}
+            {% endblock %}
+        </section>
+
+        <footer>
+            <div class="bottom-toolbar">
+                <div class="location">
+                    Nigeria | <i class="fas fa-circle" style="font-size: x-small; padding-left: 10px;"></i>
+                    <strong>Ibadan North
+                        West, Ibadan</strong> - <a href='#'>From your Location
+                        History</a> - <a href='#'>Use precise location</a> - <a href='#'>Learn more</a>
+                </div>
+                <hr>
+                <div class="main">
+                    <nav>
+                        <a href="#">Help</a>
+                        <a href="#">Send feedback</a>
+                        <a href="#">Privacy</a>
+                        <a href="#">Terms</a>
+                    </nav>
+                </div>
+            </div>
+        </footer>
+    </div>
+</body>
+
+</html>

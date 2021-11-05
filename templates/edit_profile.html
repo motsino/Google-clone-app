@@ -1,0 +1,408 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'style-edit_profile.css' %}" type="text/css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css"
+        integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
+    <title>Manage Account</title>
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <div class="top-toolbar">
+                <div class="first-row">
+                    <div class="logo">
+                        <a href="{% url 'index' %}"><img src="{% static 'img/Google_2015_logo.svg.png' %}"
+                                alt="Google logo" height="24" width="74"> <span><strong>Account</strong></span></a>
+                    </div>
+
+                    <div class="status">
+                        <span id="menudrop"><i class="fas fa-th" style="color: rgb(82, 81, 81);"
+                                onclick="showAppsmenu()"></i></span>
+                        {% if user.is_authenticated %}
+                        <button id="signin" onclick='manageAccount()'
+                            style="background-color: rgb(1, 156, 1);">{{user.username}}</button>
+                        {% else %}
+                        <a href="{% url 'login' %}"><button class="signin">Sign In</button></a>
+                        {% endif %}
+                    </div>
+                </div>
+                <div class="second-row">
+                    <nav class="left">
+                        {% if user.is_authenticated %}
+                        <a href="{% url 'manage_account' %}">Home</a>
+                        <a href="{% url 'profile' %}">Profile</a>
+                        <a href="{% url 'edit_profile' %}" class="current">Edit Profile</a>
+                        <a href="{% url 'change_passwrd' %}">Change Password</a>
+                        {% else %}
+                        <a href="{% url 'manage_account' %}">Home</a>
+                        <a href="{% url 'profile' %}">Profile</a>
+                        <a href="{% url 'edit_profile' %}" class="current">Edit Profile</a>
+                        <a href="{% url 'change_passwrd' %}">Change Password</a>
+                        <a href="{% url 'password_reset' %}">Reset Password</a>
+                        {% endif %}
+
+                    </nav>
+                </div>
+            </div>
+        </header>
+
+        <div id="apps">
+            <div class="top">
+                <a href="https://www.google.com/account/about/?hl=en-US">
+                    <div id="account">
+                        <img src="../../static/img/188px-Google_account_icon.svg.png" alt="Account" width="27"
+                            height="35">
+                        <div><span>Account</span></div>
+                    </div>
+                </a>
+                <a href="{% url 'index' %}">
+                    <div id="gsearch">
+                        <img src="../../static/img/Google__G__Logo.svg.png" alt="Gsearch" width="34" height="35">
+                        <div><span>Search</span></div>
+                    </div>
+                </a>
+                <a href="https://www.google.com.ng/maps/">
+                    <div id="map">
+                        <img src="../../static/img/167px-Google_Maps_icon_(2020).svg.png" alt="Maps" width="27"
+                            height="35">
+                        <div><span>Maps</span></div>
+                    </div>
+                </a>
+                <a href="https://www.youtube.com/">
+                    <div id="youtube">
+                        <img src="../../static/img/320px-YouTube_full-color_icon_(2017).svg.png" alt="Youtube"
+                            width="38" height="25">
+                        <div><span>Youtube</span></div>
+                    </div>
+                </a>
+                <a href="https://play.google.com/store/apps?hl=en-GB">
+                    <div id="play">
+                        <img src="../../static/img/Google_Play_Arrow_logo.svg.png" alt="Play" width="29" height="30">
+                        <div><span>Play</span></div>
+                    </div>
+                </a>
+                <a href="https://news.google.com/topstories">
+                    <div id="news">
+                        <img src="../../static/img/Google_News_icon.svg.png" alt="News" width="33" height="28">
+                        <div><span>News</span></div>
+                    </div>
+                </a>
+                <a href="https://www.google.com/intl/en-GB/gmail/about/">
+                    <div id="gmail">
+                        <img src="../../static/img/320px-Gmail_icon_(2020).svg.png" alt="Gmail" width="37" height="25">
+                        <div><span>Gmail</span></div>
+                    </div>
+                </a>
+                <a href="https://apps.google.com/meet/">
+                    <div id="meet">
+                        <img src="../../static/img/292px-Google_Meet_icon_(2020).svg.png" alt="Meet" width="34"
+                            height="28">
+                        <div><span>Meet</span></div>
+                    </div>
+                </a>
+                <a href="https://mail.google.com/chat/u/">
+                    <div id="chat">
+                        <img src="../../static/img/230px-Google_Chat_icon_(2020).svg.png" alt="Chat" width="30"
+                            height="30">
+                        <div><span>Chat</span></div>
+                    </div>
+                </a>
+                <a href="https://contacts.google.com/">
+                    <div id="contacts">
+                        <img src="../../static/img/Google_Contacts_logo.png" alt="Contacts" width="32" height="33">
+                        <div><span>Contacts</span></div>
+                    </div>
+                </a>
+                <a href="https://drive.google.com/drive/">
+                    <div id="drive">
+                        <img src="../../static/img/269px-Google_Drive_icon_(2020).svg.png" alt="Drive" width="30"
+                            height="31">
+                        <div><span>Drive</span></div>
+                    </div>
+                </a>
+                <a href="https://calendar.google.com/calendar/u/">
+                    <div id="calendar">
+                        <img src="../../static/img/240px-Google_Calendar_icon_(2020).svg.png" alt="Calendar" width="29"
+                            height="30">
+                        <div><span>Calendar</span></div>
+                    </div>
+                </a>
+                <a href="https://translate.google.com.ng/">
+                    <div id="translate">
+                        <img src="../../static/img/Google_Translate_Icon.png" alt="Translate" width="33" height="35">
+                        <div><span>Translate</span></div>
+                    </div>
+                </a>
+                <a href="https://photos.google.com/">
+                    <div id="photos">
+                        <img src="../../static/img/240px-Google_Photos_icon_(2020).svg.png" alt="Photos" width="35"
+                            height="35">
+                        <div><span>Photos</span></div>
+                    </div>
+                </a>
+                <a href="https://duo.google.com/">
+                    <div id="duo">
+                        <img src="../../static/img/Google_Duo_icon.svg.png" alt="Duo" width="35" height="35">
+                        <div><span>Duo</span></div>
+                    </div>
+                </a>
+            </div>
+            <hr>
+            <div class="under">
+                <a href="https://docs.google.com/document/">
+                    <div id="docs">
+                        <img src="../../static/img/174px-Google_Docs_2020_Logo.svg.png" alt="Docs" width="25"
+                            height="35">
+                        <div><span>Docs</span></div>
+                    </div>
+                </a>
+                <a href="https://docs.google.com/spreadsheets/">
+                    <div id="sheets">
+                        <img src="../../static/img/174px-Google_Sheets_2020_Logo.svg.png" alt="Sheets" width="25"
+                            height="35">
+                        <div><span>Sheets</span></div>
+                    </div>
+                </a>
+                <a href="https://docs.google.com/presentation/">
+                    <div id="slides">
+                        <img src="../../static/img/174px-Google_Slides_2020_Logo.svg.png" alt="Slides" width="25"
+                            height="35">
+                        <div><span>Slides</span></div>
+                    </div>
+                </a>
+                <a href="https://books.google.com.ng/">
+                    <div id="books">
+                        <img src="../../static/img/Play_Books_30007.png" alt="Books" width="36" height="37">
+                        <div><span>Books</span></div>
+                    </div>
+                </a>
+                <a href="https://www.blogger.com/about/">
+                    <div id="blogger">
+                        <img src="../../static/img/Blogger.svg.png" alt="Blogger" width="34" height="35">
+                        <div><span>Blogger</span></div>
+                    </div>
+                </a>
+                <a href="https://hangouts.google.com/">
+                    <div id="hangouts">
+                        <img src="../../static/img/Hangouts_icon.svg.png" alt="Hangouts" width="32" height="35">
+                        <div><span>Hangouts</span></div>
+                    </div>
+                </a>
+                <a href="https://keep.google.com/">
+                    <div id="keep">
+                        <img src="../../static/img/64px-Google_Keep_icon_(2020).svg.png" alt="Keep" width="25"
+                            height="35">
+                        <div><span>Keep</span></div>
+                    </div>
+                </a>
+                <a href="https://jamboard.google.com/">
+                    <div id="jamboard">
+                        <img src="../../static/img/240px-Google_Jamboard_logomark.svg.png" alt="Jamboard" width="35"
+                            height="37">
+                        <div><span>Jamboard</span></div>
+                    </div>
+                </a>
+                <a href="https://earth.google.com/web/">
+                    <div id="earth">
+                        <img src="../../static/img/Google_Earth_icon.svg.png" alt="Earth" width="35" height="35">
+                        <div><span>Earth</span></div>
+                    </div>
+                </a>
+                <a href="https://www.google.com.ng/save">
+                    <div id="collections">
+                        <img src="../../static/img/google-collections-logo-1194E01A3F-seeklogo.com.png"
+                            alt="Collections" width="27" height="35">
+                        <div><span>Collections</span></div>
+                    </div>
+                </a>
+                <a href="https://artsandculture.google.com/">
+                    <div id="arts">
+                        <img src="../../static/img/240px-Google_Arts_and_Culture_logo.svg.png" alt="Arts and Culture"
+                            width="35" height="35">
+                        <div><span>Arts and culture</span></div>
+                    </div>
+                </a>
+                <a href="https://ads.google.com/home/">
+                    <div id="ads">
+                        <img src="../../static/img/192px-Google_Ads_logo.svg.png" alt="Google Ads" width="35"
+                            height="35">
+                        <div><span>Google Ads</span></div>
+                    </div>
+                </a>
+                <a href="https://podcasts.google.com/">
+                    <div id="podcasts">
+                        <img src="../../static/img/240px-Google_Podcasts_icon.svg.png" alt="Podcasts" width="33"
+                            height="35">
+                        <div><span>Podcasts</span></div>
+                    </div>
+                </a>
+                <a href="https://www.google.com/travel/">
+                    <div id="travel">
+                        <img src="../../static/img/travel_logo_200.png" alt="Travel" width="40" height="38">
+                        <div><span>Travel</span></div>
+                    </div>
+                </a>
+                <a href="https://docs.google.com/forms/">
+                    <div id="forms">
+                        <img src="../../static/img/178px-Google_Forms_2020_Logo.svg.png" alt="Forms" width="25"
+                            height="35">
+                        <div><span>Forms</span></div>
+                    </div>
+                </a>
+            </div>
+            <p><a href="https://about.google/intl/en/products/">More from google</a></p>
+        </div>
+
+        <section>
+            <h1>Edit Profile</h1>
+            <div class="edit_form">
+                <form action="" method="POST" enctype="multipart/form-data">
+                    {% csrf_token %}
+                    {{ change_form.as_p }}
+                    {{ profile_form.as_p }}
+                    <button type="submit" class="edit_btn">Submit</button>
+                </form>
+            </div>
+        </section>
+        <!-- <div class="pagenav">
+            <div class="paginate">
+                page {{web_results.number}} of {{web_results.paginator.num_pages}}
+            </div>
+            {% if web_results.has_other_pages %}
+            <ul>
+                {% if web_results.has_previous %}
+                <li><a href="?page=1">&laquo; First</a></li>
+                <li><a href="?page={{web_results.previous_page_number}}">Previous</a></li>
+                {% endif %}
+
+                {% if web_results.has_next %}
+                <li><a href="?page={{web_results.next_page_number}}">Next</a></li>
+                <li><a href="?page={{web_results.paginator.num_pages}}">Last &raquo;</a></li>
+                {% endif %}
+            </ul>
+            {% endif %}
+        </div> -->
+
+    </div>
+
+    <div id="mng_acct">
+        <h1 style="font-size: 35px;">{{user.username}}</h1>
+        <div class="full_name">
+            {{user.first_name}} {{user.last_name}}
+        </div>
+        <div class="email">{{user.email}}</div>
+        <a href="{% url 'manage_account' %}" class="mng_btn">Manage your dummy account</a>
+        <hr style="margin-top: 50px; margin-bottom: 0;">
+        <div class="add_new" style="font-size: 17px;"><a href="{% url 'signup' %}"><i class="fas fa-user-plus"></i> Add
+                another
+                account</div></a>
+        <hr style="margin-top: 0;">
+        <div><a href="{% url 'logout' %}"><button class="sign_out">Sign Out</button></a></div>
+    </div>
+
+    <footer>
+        <div class="bottom-toolbar">
+            <div class="location">
+                Nigeria | <i class="fas fa-circle" style="font-size: x-small; padding-left: 10px;"></i>
+                <strong>Ibadan North
+                    West, Ibadan</strong> - <a href='https://www.google.com/maps/timeline'>From your Location
+                    History</a> - <a href='#'>Use precise location</a> - <a
+                    href='https://support.google.com/websearch/answer/'>Learn more</a>
+            </div>
+            <hr>
+            <div class="main">
+                <nav>
+                    <ul>
+                        <li>
+                            <span class="drop" onclick="showSettingsfooter()">Settings</span>
+                            <ul id="dropdownfooter">
+                                <li><a href="https://www.google.com/preferences">Search settings</a></li>
+                                <li><a href="https://www.google.com/advanced_search">Advanced search</a></li>
+                                <li><a href="https://myactivity.google.com/privacyadvisor/search">Your data in
+                                        search</a></li>
+                                <li><a href="https://myactivity.google.com/product/search?utm_source=google">Search
+                                        history</a></li>
+                                <li><a href="https://support.google.com/websearch/">Search help</a></li>
+                                <li><a href="https://www.google.com/preferences?hl=en-NG&fg=1">Send feedback</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li><a href="https://support.google.com/websearch">Help</a></li>
+                        <li><a href="#">Send feedback</a></li>
+                        <li><a href="https://policies.google.com/privacy">Privacy</a></li>
+                        <li><a href="https://policies.google.com/terms">Terms</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </footer>
+    <script>
+        function manageAccount() {
+            if (document.getElementById("mng_acct").style.display === "none") {
+                document.getElementById("mng_acct").style.display = "block";
+            }
+            else {
+                document.getElementById("mng_acct").style.display = "none";
+            }
+        }
+        function showAppsmenu() {
+            if (document.getElementById("apps").style.display === "none") {
+                document.getElementById("apps").style.display = "block";
+            }
+            else {
+                document.getElementById("apps").style.display = "none";
+            }
+            if (document.getElementById("menudrop").style.background === "dimgray") {
+                document.getElementById("menudrop").style.background = "rgb(219, 218, 218)";
+            }
+            else {
+                document.getElementById("menudrop").style.background = "dimgray";
+            }
+        }
+        function showSettingsheader() {
+            if (document.getElementById("dropdownheader").style.display === "none") {
+                document.getElementById("dropdownheader").style.display = "block";
+            }
+            else {
+                document.getElementById("dropdownheader").style.display = "none";
+            }
+        }
+        function showSettingsfooter() {
+            if (document.getElementById("dropdownfooter").style.display === "none") {
+                document.getElementById("dropdownfooter").style.display = "block";
+            }
+            else {
+                document.getElementById("dropdownfooter").style.display = "none";
+            }
+        }
+        var dropdowns = ['dropdownfooter', 'apps', 'mng_acct'];
+        window.addEventListener('mouseup', function (event) {
+            for (var i = 0; i < dropdowns.length; i++) {
+                var dropdown = document.getElementById(dropdowns[i]);
+                if (event.target != dropdown && event.target.parentNode != dropdown) {
+                    dropdown.style.display = "none";
+                }
+            }
+            var menu = document.getElementById("menudrop");
+            var apps = document.getElementById("apps");
+            if (event.target != menu && event.target.parentNode != menu && event.target != apps) {
+                menu.style.background = "white";
+            }
+        });
+        document.getElementById("menudrop").onmouseover = function () {
+            this.style.background = 'rgb(230, 230, 230)';
+        }
+        document.getElementById("menudrop").onmousedown = function () {
+            this.style.background = "rgb(219, 218, 218)";
+        }
+    </script>
+</body>
+
+</html>
