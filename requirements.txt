@@ -58,7 +58,6 @@ protobuf==3.14.0
 psycopg2==2.9.1
 pyasn1==0.4.8
 pyasn1-modules==0.2.8
-PyAudio @ file:///C:/Users/USER/Python-Codes/Python_speech_assistant_app/PyAudio-0.2.11-cp38-cp38-win32.whl
 PyAutoGUI==0.9.52
 pycparser==2.20
 PyDictionary==2.0.1
