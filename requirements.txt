@@ -52,7 +52,7 @@ pyinstaller==4.1
 pyinstaller-hooks-contrib==2020.11
 pyjsparser==2.7.1
 PyJWT==1.7.1
-python-dateutil<=3.0
+python-dateutil
 PyTweening==1.0.3
 pytz==2020.1
 pytzdata==2020.1
