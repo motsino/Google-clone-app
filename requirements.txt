@@ -78,7 +78,7 @@ pyquery==1.4.3
 PyRect==0.1.4
 PyScreeze==0.1.27
 pySmartDL==1.3.4
-python-dateutil==2.8.1
+python-dateutil==1.5
 PyTweening==1.0.3
 pytz==2020.1
 pytzdata==2020.1
