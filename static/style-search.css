@@ -42,17 +42,22 @@ button:hover{
 .first-row{
     display: flex;
     align-items: center;
-    margin-bottom: 31px;
+    margin-bottom: 27px;
 }
 
 .logo{
-    margin-right: 40px;
+    margin-right: 30px;
 }
 
 .search{
-    margin-right: 42em;
-    width: 40%;
+    margin-right: 25em;
+    width: 24%;
 }
+
+.status{
+    margin-left: 30px;
+}
+
 
 .search form a i{
     position: absolute;
@@ -243,6 +248,7 @@ button:hover{
 .second-row{
     display: flex;
     margin-left: 155px;
+    margin-bottom: 20px;
 }
 
 .left{

@@ -39,8 +39,8 @@
                 <form action="base_images" method="POST">
                     {% csrf_token %}
                     <input type="text" class="search-bar" name="image">
-                    <a href="#"><i class="fas fa-search srh"></i></a>
-                    <a href="#"><i class="fas fa-microphone mic"></i></a>
+                    <!-- <a href="#"><i class="fas fa-search srh"></i></a>
+                    <a href="#"><i class="fas fa-microphone mic"></i></a> -->
                     <div class="search-nav">
                         <div class="search-button">
                             <button type="submit">Google Search</button>
@@ -275,48 +275,49 @@
             <div><a href="{% url 'logout' %}"><button class="sign_out">Sign Out</button></a></div>
         </div>
 
-        <footer>
-            <div class="bottom-toolbar">
-                <div class="location">
-                    Nigeria
-                </div>
-                <hr>
-                <div class="main">
-                    <nav class="footer-left">
-                        <a href="https://about.google/">About</a>
-                        <a href="https://ads.google.com/intl/en_ng/home/">Advertising</a>
-                        <a href="https://smallbusiness.withgoogle.com/intl/en-ssa/">Business</a>
-                        <a href="https://www.google.com/search/howsearchworks/">How Search Works</a>
-                    </nav>
-                    <nav class="footer-middle">
-                        <a href="https://sustainability.google/commitments/"><i class="fab fa-envira"
-                                style="color: rgb(18, 150, 18);"></i>Carbon neutral since 2007</a>
-                    </nav>
-                    <nav class="footer-right">
-                        <ul>
-                            <li><a href="https://policies.google.com/privacy">Privacy</a></li>
-                            <li><a href="https://policies.google.com/terms">Terms</a></li>
-                            <li>
-                                <span class="drop" onclick="showSettingshome()">Settings</span>
-                                <ul id="dropdownhome">
-                                    <li><a href="https://www.google.com/preferences">Search settings</a></li>
-                                    <li><a href="https://www.google.com/advanced_search">Advanced search</a></li>
-                                    <li><a href="https://myactivity.google.com/privacyadvisor/search">Your data in
-                                            search</a></li>
-                                    <li><a href="https://myactivity.google.com/product/search?utm_source=google">Search
-                                            history</a></li>
-                                    <li><a href="https://support.google.com/websearch/">Search help</a></li>
-                                    <li><a href="https://www.google.com/preferences?hl=en-NG&fg=1">Send feedback</a>
-                                    </li>
-                                </ul>
-                            </li>
-                        </ul>
-                    </nav>
-                </div>
 
-            </div>
-        </footer>
     </div>
+    <footer>
+        <div class="bottom-toolbar">
+            <div class="location">
+                Nigeria
+            </div>
+            <hr>
+            <div class="main">
+                <nav class="footer-left">
+                    <a href="https://about.google/">About</a>
+                    <a href="https://ads.google.com/intl/en_ng/home/">Advertising</a>
+                    <a href="https://smallbusiness.withgoogle.com/intl/en-ssa/">Business</a>
+                    <a href="https://www.google.com/search/howsearchworks/">How Search Works</a>
+                </nav>
+                <nav class="footer-middle">
+                    <a href="https://sustainability.google/commitments/"><i class="fab fa-envira"
+                            style="color: rgb(18, 150, 18);"></i>Carbon neutral since 2007</a>
+                </nav>
+                <nav class="footer-right">
+                    <ul>
+                        <li><a href="https://policies.google.com/privacy">Privacy</a></li>
+                        <li><a href="https://policies.google.com/terms">Terms</a></li>
+                        <li>
+                            <span class="drop" onclick="showSettingshome()">Settings</span>
+                            <ul id="dropdownhome">
+                                <li><a href="https://www.google.com/preferences">Search settings</a></li>
+                                <li><a href="https://www.google.com/advanced_search">Advanced search</a></li>
+                                <li><a href="https://myactivity.google.com/privacyadvisor/search">Your data in
+                                        search</a></li>
+                                <li><a href="https://myactivity.google.com/product/search?utm_source=google">Search
+                                        history</a></li>
+                                <li><a href="https://support.google.com/websearch/">Search help</a></li>
+                                <li><a href="https://www.google.com/preferences?hl=en-NG&fg=1">Send feedback</a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+
+        </div>
+    </footer>
     <script>
         function manageAccount() {
             if (document.getElementById("mng_acct").style.display === "none") {

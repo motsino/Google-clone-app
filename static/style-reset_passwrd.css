@@ -14,6 +14,7 @@ body{
     width: 100%;
     margin: 0;
     overflow: hidden;
+    margin-bottom: 500px;
 }
 
 a{
@@ -43,16 +44,20 @@ button:hover{
 .first-row{
     display: flex;
     align-items: center;
-    margin-bottom: 31px;
+    margin-bottom: 27px;
 }
 
 .logo{
-    margin-right: 1200px;
+    margin-right: 500px;
 }
 
 .search{
-    margin-right: 42em;
-    width: 40%;
+    margin-right: 25em;
+    width: 24%;
+}
+
+.status{
+    margin-left: 30px;
 }
 
 .search form a i{
@@ -346,7 +351,7 @@ input{
 }
 
 footer{
-    position: fixed;
+    position: relative;
     bottom: 0;
     width: 100%;
     font-size: 15px;
@@ -414,9 +419,7 @@ footer .main a{
     .top-toolbar{
         height: 180px;
     }
-    .first-row{
-        display: flex;
-    }
+    
     .logo{
         margin-right: 50px;
         text-align: center;
@@ -490,6 +493,10 @@ footer .main a{
     .rs_top{
         display: flex;
     }
+    
+    footer{
+        position: relative;
+    }
 
     footer .location{
         padding-left: 10px;
@@ -498,4 +505,26 @@ footer .main a{
         padding-left: 50px;
     }
 
+}
+
+
+@media screen and (max-width: 390px) {
+    .second-row{
+        text-align: center;
+        margin-left: 12px;
+    }
+    .second-row i{
+        display: none;
+    }
+
+    .left{
+        display: flex;
+    }
+    .left a{
+        font-size: 15px;
+        padding-right: 10px;
+    }
+    footer{
+        position: relative;
+    }
 }

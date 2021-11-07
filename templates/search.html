@@ -26,8 +26,8 @@
                         <form action="{% url 'searches' search_input %}" method="post">
                             {% csrf_token %}
                             <input type="text" class="search-bar" name="search" value="{{search_input}}">
-                            <a href="#"><i class="fas fa-microphone mic"></i></a>
-                            <a href="{% url 'searches' search_input %}"><i class="fas fa-search srh"></i></a>
+                            <!-- <a href="#"><i class="fas fa-microphone mic"></i></a>
+                            <a href="{% url 'searches' search_input %}"><i class="fas fa-search srh"></i></a> -->
                         </form>
                     </div>
                     <div class="status">

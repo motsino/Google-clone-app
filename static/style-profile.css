@@ -14,6 +14,7 @@ body{
     width: 100%;
     margin: 0;
     overflow: hidden;
+    margin-bottom: 100px;
 }
 
 a{
@@ -43,17 +44,18 @@ button:hover{
 .first-row{
     display: flex;
     align-items: center;
-    margin-bottom: 31px;
+    margin-bottom: 27px;
 }
 
 .logo{
-    margin-right: 1200px;
+    margin-right: 500px;
 }
 
 .search{
-    margin-right: 42em;
-    width: 40%;
+    margin-right: 25em;
+    width: 24%;
 }
+
 
 .search form a i{
     position: absolute;
@@ -395,7 +397,7 @@ footer .main a{
 }
 
 @media screen and (max-width: 780px){
-    .status, .right{
+    .right{
         display: none;
     }
     .top-toolbar{
@@ -405,11 +407,7 @@ footer .main a{
         display: flex;
     }
     .logo{
-        margin-right: 50px;
-        text-align: center;
-        margin-bottom: 15px;
-    }
-    .logo{
+        margin-right: 140px;
         text-align: center;
         margin-bottom: 15px;
     }
@@ -495,11 +493,58 @@ footer .main a{
         display: flex;
     }
 
+    footer{
+        position: relative;
+    }
+
     footer .location{
         padding-left: 10px;
     }
     footer .main{
-        padding-left: 50px;
+        margin: 0;
+        padding-left: 0;
+    }
+    footer .main a{
+        padding-left: 0;
+        padding-right: 10px;
     }
 
+}
+
+
+@media screen and (max-width: 390px){
+    .logo{
+        margin-right: 65px;
+        text-align: center;
+    }
+    .second-row{
+        text-align: center;
+        margin-left: 12px;
+    }
+    .second-row i{
+        display: none;
+    }
+
+    .left{
+        display: flex;
+    }
+    .left a{
+        font-size: 15px;
+        padding-right: 10px;
+    }
+    footer{
+        position: relative;
+    }
+
+    footer .location{
+        padding-left: 10px;
+    }
+    footer .main{
+        margin: 0;
+        padding-left: 0;
+    }
+    footer .main a{
+        padding-left: 0;
+        padding-right: 10px;
+    }
 }

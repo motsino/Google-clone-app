@@ -14,12 +14,12 @@ body{
     width: 100%;
     margin: 0;
     overflow: hidden;
+    margin-bottom: 700px;
 }
 
 a{
     text-decoration: none;
 }
-
 
 a:hover{
     text-decoration: underline;
@@ -310,7 +310,7 @@ button:hover{
 /* Footer */
 
 footer{
-    position: absolute;
+    position: relative;
     bottom: 0;
     width: 100%;
     font-size: 15px;
@@ -331,17 +331,17 @@ footer{
 
 .footer-left{
     margin-left: 0;
-    margin-right: 18%;
+    margin-right: 10%;
     padding-right: 10px;
 }
 
 .footer-middle{
-    margin-right: 24%;
+    margin-right: 8%;
+    margin-left: 1%;
 }
 
 .footer-right{
     padding-right: 10px;
-    margin-left: 3%;
 }
 
 .footer-right ul{
@@ -391,6 +391,9 @@ footer nav a:hover{
 /* End of footer */
 
 @media screen and (max-width: 780px){
+    .container{
+        margin-bottom: 700px;
+    }
     .main{
         display: flex;
         flex-flow: column;
@@ -419,8 +422,9 @@ footer nav a:hover{
     }
 
     footer{
-        position: absolute;
+        position: relative;
     }
+
 
     footer nav{
         padding-top: 20px;

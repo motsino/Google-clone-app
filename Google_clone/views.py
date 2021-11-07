@@ -294,7 +294,7 @@ def videos(request, search):
     if request.method == 'POST':
         look_up = request.POST['video']
 
-        yt_api = os.environ['YT_API_KEY']
+        yt_api = 'AIzaSyBK9ieqRMnOO7TArsMyHX7Wv6GbI-B6mA0'
 
         youtube = build('youtube', 'v3', developerKey=yt_api)
         while pages < 3:
@@ -350,7 +350,7 @@ def videos(request, search):
         return render(request, 'videos.html', {'all_videos': all_videos, 'search_input': look_up})
 
     elif search:
-        yt_api = os.environ['YT_API_KEY']
+        yt_api = 'AIzaSyBK9ieqRMnOO7TArsMyHX7Wv6GbI-B6mA0'
 
         youtube = build('youtube', 'v3', developerKey=yt_api)
         while pages < 3:
