@@ -498,11 +498,41 @@ footer .main a{
         display: none;
     }
 
+    footer{
+        position: relative;
+    }
+
     footer .location{
         padding-left: 10px;
     }
     footer .main{
-        padding-left: 50px;
+        margin: 0;
+        padding-left: 0;
+    }
+    footer .main a{
+        padding-left: 0;
+        padding-right: 10px;
     }
 
+}
+
+@media screen and (max-width: 460px){
+    .news{
+        width: 380px;
+    }
+    footer{
+        position: relative;
+    }
+
+    footer .location{
+        padding-left: 10px;
+    }
+    footer .main{
+        margin: 0;
+        padding-left: 0;
+    }
+    footer .main a{
+        padding-left: 0;
+        padding-right: 10px;
+    }
 }

@@ -14,7 +14,7 @@ body{
     width: 100%;
     margin: 0;
     overflow: hidden;
-    margin-bottom: 500px;
+    margin-bottom: 1000px;
 }
 
 a{
@@ -502,13 +502,18 @@ footer .main a{
         padding-left: 10px;
     }
     footer .main{
-        padding-left: 50px;
+        margin: 0;
+        padding-left: 0;
+    }
+    footer .main a{
+        padding-left: 0;
+        padding-right: 10px;
     }
 
 }
 
 
-@media screen and (max-width: 390px) {
+@media screen and (max-width: 460px) {
     .second-row{
         text-align: center;
         margin-left: 12px;
@@ -526,5 +531,17 @@ footer .main a{
     }
     footer{
         position: relative;
+    }
+
+    footer .location{
+        padding-left: 10px;
+    }
+    footer .main{
+        margin: 0;
+        padding-left: 0;
+    }
+    footer .main a{
+        padding-left: 0;
+        padding-right: 10px;
     }
 }

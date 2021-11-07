@@ -477,7 +477,7 @@ footer .main a{
 
     .all{
         display: grid;
-        grid-gap: 1.8em;
+        grid-gap: 1em;
         grid-template-columns: repeat(2, 1fr);
     }
 
@@ -485,11 +485,43 @@ footer .main a{
         width: 150px;
     }
 
+    footer{
+        position: relative;
+    }
+
     footer .location{
         padding-left: 10px;
     }
     footer .main{
-        padding-left: 50px;
+        margin: 0;
+        padding-left: 0;
+    }
+    footer .main a{
+        padding-left: 0;
+        padding-right: 10px;
+    }
+
+}
+
+@media screen and (max-width: 440px){
+    .all{
+        display: flex;
+        flex-flow: column;
+    }
+    footer{
+        position: relative;
+    }
+
+    footer .location{
+        padding-left: 10px;
+    }
+    footer .main{
+        margin: 0;
+        padding-left: 0;
+    }
+    footer .main a{
+        padding-left: 0;
+        padding-right: 10px;
     }
 
 }

@@ -14,7 +14,7 @@ body{
     width: 100%;
     margin: 0;
     overflow: hidden;
-    margin-bottom: 700px;
+    margin-bottom: 900px;
 }
 
 a{
@@ -516,9 +516,9 @@ footer .main a{
 
 }
 
-@media screen and (max-width: 390px){
+@media screen and (max-width: 460px){
     .logo{
-        margin-right: 65px;
+        margin-right: 40px;
         text-align: center;
     }
     .second-row{
