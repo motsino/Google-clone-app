@@ -7,3 +7,5 @@ Languages and technologies used here includes;
 3. Javascript (Very little JS is used in this project)
 4. Python
 5. Python web framework i.e Django
+
+A link to the app: https://my-google-clone-app.herokuapp.com/
